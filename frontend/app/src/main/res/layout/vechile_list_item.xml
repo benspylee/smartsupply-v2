@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+
+
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="94dp"
+            android:layout_height="81dp"
+            android:src="@drawable/shipping" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/vechileregno"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Vechile RegNo"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/ownername"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vechileregno"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="owner name"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <TextView
+        android:id="@+id/mobileno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ownername"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="mobileno"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <ImageView
+        android:id="@+id/optionsBtn"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/vechileregno"
+        android:gravity="right"
+        android:src="@drawable/ic_dots">
+
+    </ImageView>
+
+
+</RelativeLayout>

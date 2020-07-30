@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activity.ui.shop.ShopItemDetailFragment">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+
+     <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:padding="5dip" >
+
+             <!--  ListRow Left sied Thumbnail image -->
+
+             <TextView
+                 android:id="@+id/phoneno"
+                 android:layout_width="217dp"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/imgemail"
+                 android:layout_alignParentStart="true"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentEnd="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginStart="47dp"
+                 android:layout_marginLeft="47dp"
+                 android:layout_marginEnd="160dp"
+                 android:layout_marginRight="160dp"
+                 android:layout_marginBottom="-28dp"
+                 android:text="TextView" />
+
+             <TextView
+                 android:id="@+id/ownername"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/shopname"
+                 android:layout_marginTop="1dip"
+                 android:layout_toRightOf="@+id/thumbnail"
+                 android:text="owner name"
+                 android:textColor="#343434"
+                 android:textSize="10dip" />
+
+             <LinearLayout android:id="@+id/thumbnail"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:padding="3dip"
+                 android:layout_alignParentLeft="true"
+                 android:layout_marginRight="5dip">
+
+                 <ImageView
+                     android:id="@+id/imageView"
+                     android:layout_width="86dp"
+                     android:layout_height="91dp"
+                     android:src="@drawable/shop" />
+
+             </LinearLayout>
+
+
+             <TextView
+                 android:id="@+id/shopname"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignTop="@+id/thumbnail"
+                 android:layout_toRightOf="@+id/thumbnail"
+                 android:text="Shop Name"
+                 android:textColor="#040404"
+                 android:textSize="15dip"
+                 android:textStyle="bold"
+                 android:typeface="sans" />
+
+
+             <TextView
+                 android:id="@+id/address"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/shopname"
+                 android:layout_marginLeft="1dp"
+                 android:layout_marginTop="19dp"
+                 android:layout_toRightOf="@+id/thumbnail"
+                 android:text="Address"
+                 android:textColor="#343434"
+                 android:textSize="10dip" />
+
+             <ImageView
+                 android:id="@+id/optionsBtn"
+                 android:layout_width="40dp"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_alignTop="@id/shopname"
+                 android:gravity="right"
+                 android:visibility="invisible"
+                 android:src="@drawable/ic_dots"
+                 >
+
+             </ImageView>
+
+             <ImageView
+                 android:id="@+id/imgemail"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:layout_alignTop="@id/shopname"
+                 android:layout_alignParentStart="true"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginStart="19dp"
+                 android:layout_marginLeft="19dp"
+                 android:layout_marginTop="103dp"
+                 android:layout_marginRight="372dp"
+                 android:gravity="right"
+                 android:src="@drawable/mail">
+
+             </ImageView>
+
+             <ImageView
+                 android:id="@+id/imgmobileno"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:layout_alignTop="@id/shopname"
+                 android:layout_alignParentStart="true"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginStart="13dp"
+                 android:layout_marginLeft="13dp"
+                 android:layout_marginTop="130dp"
+                 android:layout_marginRight="378dp"
+                 android:gravity="right"
+                 android:src="@drawable/phone">
+
+             </ImageView>
+
+             <TextView
+                 android:id="@+id/txtemailid"
+                 android:layout_width="225dp"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/imgemail"
+                 android:layout_alignParentStart="true"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentEnd="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginStart="54dp"
+                 android:layout_marginLeft="54dp"
+                 android:layout_marginEnd="176dp"
+                 android:layout_marginRight="176dp"
+                 android:layout_marginBottom="1dp"
+                 android:text="TextView" />
+
+         </RelativeLayout>
+     </androidx.cardview.widget.CardView>
+
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="Search itemname"
+         android:padding="10dp"
+         ></EditText>
+
+
+     <androidx.recyclerview.widget.RecyclerView
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:tools="http://schemas.android.com/tools"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scrollbars="vertical"
+         android:id="@+id/recyclerView">
+     </androidx.recyclerview.widget.RecyclerView>
+
+
+ </LinearLayout>
+
+</FrameLayout>

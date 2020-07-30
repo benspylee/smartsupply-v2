@@ -1,0 +1,9 @@
+applications:
+  - name: smartsupply
+    random-route: true
+    path: build/libs/smartsupply-0.0.1-SNAPSHOT.war
+    memory: 256M
+    instances: 1
+    env:
+      JAVA_OPTS: '-XX:MaxMetaspaceSize=80780K -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 9.+ } }'

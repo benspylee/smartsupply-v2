@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ui.cart.ShopAddressDeliveryFragment">
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="9dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="311dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Delivery Address"
+            android:textSize="15dip"
+            android:textStyle="bold">
+
+        </TextView>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="356dp"
+        android:scrollbars="vertical"></androidx.recyclerview.widget.RecyclerView>
+
+
+</ScrollView>
+          </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery Type"
+            android:textSize="15dip"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/deliverytype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/selfpick"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scheduled Self pickup"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/doordelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="door delivery"></RadioButton>
+
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:text="Delivery Charges"></TextView>
+
+            <TextView
+                android:id="@+id/txtdelverycharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:textStyle="bold"
+                android:text="Delivery Charges"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Type"
+            android:textSize="15dip"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/paytype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/upi"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPI"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Digital PayOnDelivery"></RadioButton>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/txttotalorderprice"
+            android:layout_width="221dp"
+            android:layout_height="match_parent"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:text="total cart price:"></TextView>
+
+        <Button
+            android:id="@+id/placeOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/btn_login_bg"
+            android:text="Place Order"
+
+            android:textColor="@color/white"></Button>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</FrameLayout>

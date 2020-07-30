@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.asuravan.smartsupply.activity.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_item_master"
+        android:name="com.asuravan.smartsupply.activity.ui.useritem.ItemMasterFragment"
+        android:label="@string/menu_itemmaster"
+        tools:layout="@layout/fragment_item_master" />
+
+    <fragment
+        android:id="@+id/nav_shop"
+        android:name="com.asuravan.smartsupply.activity.ui.shop.ShopFragment"
+        android:label="@string/menu_shop"
+        tools:layout="@layout/fragment_shop" >
+
+       <!-- <action android:id="@+id/actionshoptovendorserch"
+            app:destination="@id/vendor_serach"
+            ></action>-->
+
+    </fragment>
+    <action android:id="@+id/actionhometocart"
+        app:destination="@id/nav_cart"
+        ></action>
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.asuravan.smartsupply.activity.ui.cart.ShoppingCartFragment"
+        android:label="@string/menu_cart"
+        tools:layout="@layout/fragment_shopping_cart" />
+
+    <fragment
+        android:id="@+id/nav_iteminput_master"
+        android:name="com.asuravan.smartsupply.activity.ui.useritem.ItemMasterInputFragment"
+        android:label="@string/menu_itemmaster_inp"
+        tools:layout="@layout/fragment_item_master_input" />
+
+    <fragment
+        android:id="@+id/nav_vechile"
+        android:name="com.asuravan.smartsupply.activity.ui.vechile.VechileFragment"
+        android:label="@string/menu_vechile"
+        tools:layout="@layout/fragment_vechile" />
+
+    <fragment
+        android:id="@+id/nav_vendor_search"
+        android:name="com.asuravan.smartsupply.activity.ui.vendor.VendorSearchFragment"
+        tools:layout="@layout/fragment_vendor_search"
+        android:label="@string/menu_vendsearch"></fragment>
+
+    <fragment
+        android:id="@+id/nav_userproile"
+        android:name="com.asuravan.smartsupply.activity.ui.user.UserProfileFragment"
+        tools:layout="@layout/fragment_user_profile"
+        android:label="UserProfile"></fragment>
+
+
+    <action android:id="@+id/actionordertodetails"
+        app:destination="@id/nav_cart"
+        ></action>
+
+    <fragment
+        android:id="@+id/nav_order_details"
+        android:name="com.asuravan.smartsupply.activity.ui.order.OrderDetailsFragment"
+        tools:layout="@layout/fragment_order_details"
+        android:label="OrderDetails"></fragment>
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.asuravan.smartsupply.activity.ui.order.OrderFragment"
+        tools:layout="@layout/fragment_order"
+        android:label="Order"></fragment>
+
+    <fragment
+        android:id="@+id/nav_delivtask"
+        android:name="com.asuravan.smartsupply.activity.ui.order.DeilveryTaskFragment"
+        tools:layout="@layout/fragment_order"
+        android:label="Order"></fragment>
+
+
+
+</navigation>

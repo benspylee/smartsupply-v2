@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">smartsupply</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_firstname">Firstname</string>
+    <string name="hint_lastname">Lastname</string>
+    <string name="hint_mobileno">Mobile No</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_submit">SUBMIT</string>
+    <string name="btn_link_to_register">Sign up now.</string>
+    <string name="btn_link_to_login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+    <string name="usertype">Role</string>
+    <string name="title_activity_dash_boardactivity">DashBoardactivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="logout">Logout</string>
+
+
+    <string name="menu_cart">Shopping Cart</string>
+    <string name="menu_vechile">Vechile</string>
+    <string name="menu_vendsearch">Vendor search</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_itemmaster">Items</string>
+    <string name="menu_itemmaster_inp">Items Details</string>
+    <string name="menu_shop">Shop</string>
+    <string name="menu_shop_in">ShopDetail</string>
+    <string name="item_name">Item Name</string>
+    <string name="price_name">Price Per Unit</string>
+    <string name="item_desc">Item Desc</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prodcat">product category</string>
+    <string name="unit">Unit</string>
+
+</resources>

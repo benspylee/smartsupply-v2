@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ui.vendor.VendorSearchFragment">
+
+    <LinearLayout
+        android:paddingTop="50px"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+
+                <EditText
+                    android:id="@+id/vendzipcode"
+                    android:hint="Zipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+
+                <EditText
+                    android:id="@+id/itemname"
+                    android:hint="Itemname"
+                    android:layout_below="@id/vendzipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+
+                <EditText
+                    android:id="@+id/vednorname"
+                    android:hint="vednorname"
+                    android:layout_below="@id/itemname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </EditText>
+
+
+                <Button
+                    android:id="@+id/vendSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vednorname"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:background="@color/btn_login_bg" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingTop="10px"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:id="@+id/recyclerView">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

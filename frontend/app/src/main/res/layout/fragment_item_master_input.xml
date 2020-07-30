@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ui.useritem.ItemMasterInputFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:padding="20px"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/nav_header_height">
+
+        <Spinner
+            android:id="@+id/prodcat"
+            android:spinnerMode="dialog"
+            android:prompt="@string/prodcat"
+            android:layout_width="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/input_register_hint"
+            android:hint="@string/item_name"/>
+
+        <EditText
+            android:id="@+id/item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/input_register_hint"
+            android:hint="@string/item_desc"/>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/input_register"
+                android:textColorHint="@color/input_register_hint"
+                android:hint="@string/price_name"/>
+
+            <Spinner
+                android:id="@+id/unit"
+                android:spinnerMode="dialog"
+                android:prompt="@string/unit"
+                android:layout_width="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmitItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/btn_login_bg"
+            android:text="@string/btn_submit"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</FrameLayout>
