@@ -37,12 +37,11 @@ we are trying to build the bridge that fill the gap between local vendors ,custo
 
 ### The idea
 
-we build an app that connects local vendors who need to sell their items and customers who are in need of essentail items with safety and socail distancing as main goal.
-we are engaging to build this solution quickly with IBM cloud based service like IBM cos,functions..so.. on. 
+we build an app that connects local vendors who need to sell their items and customers who are in need of essential items with safety and social distancing as main goal. we are engaging to build this solution quickly with IBM cloud based service like IBM cos,functions.so..on.
 
 ## Demo video
 
-[![Watch the video](https://github.com/Code-and-Response/Liquid-Prep/blob/master/images/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
+[![Watch the video](https://github.com/benspylee/smartsupply-v2/blob/master/docs/hqdefault.jpg)](https://youtu.be/4YYp69qVs3U)
 
 ## The architecture
 
@@ -143,6 +142,7 @@ We use [Github](https://github.com/) for versioning. For the versions available,
 ## Authors
 
 * **Barath Ramalingam** - *Initial work* - [SmartSupply](https://github.com/Benspylee)
+* **Maheshwari Pandy** -*Document support*
 
 See also the list of [contributors](https://github.com/benspylee/smartsupply-v2.git) who participated in this project.
 
