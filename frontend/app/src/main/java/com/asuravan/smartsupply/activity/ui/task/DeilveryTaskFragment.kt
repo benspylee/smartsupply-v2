@@ -121,7 +121,7 @@ class DeilveryTaskFragment : CommonFragment() {
                 itemholder.orderid.text="ODR0000"+order?.orderid
                 itemholder.shopname.text=order?.shopName
                 itemholder.order = order as Order;
-                itemholder.orderprice.text = order?.totOrderPrice.toString()
+                itemholder.orderprice.text = "Rs."+order?.totOrderPrice.toString()
                 itemholder.orderdate.text = order?.orderdt.toString()
                 itemholder.orderstatus.text = order?.orderStatDesc
 

@@ -140,19 +140,20 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/action"
             android:visibility="invisible"
+            android:id="@+id/actiondow"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/downloadinvoice"
+
                 android:layout_width="match_parent"
                 android:background="@null"
                 android:layout_height="wrap_content"
                 android:textColor="@color/btn_login_bg"
-                android:text="Download Invice">
+                android:text="Download Invoice">
 
 
             </Button>

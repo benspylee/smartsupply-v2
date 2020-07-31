@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.asuravan.smartsupply.R
 import com.asuravan.smartsupply.activity.commons.CommonFragment
+import com.asuravan.smartsupply.activity.ui.order.DeilveryTaskFragment
 import com.asuravan.smartsupply.activity.ui.order.OrderFragment
 import com.asuravan.smartsupply.activity.ui.useritem.ItemMasterFragment
 import com.asuravan.smartsupply.client.RetroRestClient
@@ -35,6 +36,7 @@ class DeliveryAcceptanceFragment : CommonFragment() {
     lateinit var txtdelverycharge: TextView;
     lateinit var totcartamt: TextView;
     lateinit var deliactions:LinearLayout;
+    lateinit var deliverycomp:Button;
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,6 +55,7 @@ class DeliveryAcceptanceFragment : CommonFragment() {
         txtdelverycharge = root.findViewById(R.id.txtdelverycharge)
         totcartamt = root.findViewById(R.id.totcartamt)
         deliactions = root.findViewById(R.id.deliactions)
+        deliverycomp= root.findViewById(R.id.deliverycomp)
         if(arguments!=null) {
             order = arguments!!.get("item") as Order;
             tottiemprice.text=order.totOrderPrice
@@ -63,6 +66,18 @@ class DeliveryAcceptanceFragment : CommonFragment() {
 
             if(order.status==2)
                 deliactions.visibility=View.VISIBLE
+            else
+                deliactions.visibility=View.INVISIBLE
+            if(order.status==4)
+                deliverycomp.visibility=View.VISIBLE
+            else
+                deliverycomp.visibility=View.INVISIBLE
+
+
+        }
+        deliverycomp.setOnClickListener {
+            val call = orderBundleService.accept( orderBundlePull(7))
+            callMethod(call, deliverycomp)
         }
 
         rejectdelivery.setOnClickListener {
@@ -71,7 +86,7 @@ class DeliveryAcceptanceFragment : CommonFragment() {
         }
 
         acceptDelivery.setOnClickListener {
-            val call = orderBundleService.accept( orderBundlePull(4))
+            val call = orderBundleService.acceptdelivery( orderBundlePull(4))
             callMethod(call, acceptDelivery)
         }
 
@@ -121,8 +136,8 @@ class DeliveryAcceptanceFragment : CommonFragment() {
                     val info: List<Order>? = response.body();
                     if (info != null) {
                         removeItemToSharedPref("cart")
-                        makeToast("Action Processed sucess..!")
-                        val fragmentGet = OrderFragment()
+                        makeToast("Processed Successfully...")
+                        val fragmentGet = DeilveryTaskFragment()
                         //     fragmentGet.setArguments(bundle)
                         var fr = fragmentManager?.beginTransaction()?.addToBackStack(null)
                         fr?.replace(R.id.nav_host_fragment, fragmentGet)

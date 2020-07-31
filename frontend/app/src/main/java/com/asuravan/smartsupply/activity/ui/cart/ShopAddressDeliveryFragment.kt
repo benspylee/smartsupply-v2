@@ -282,14 +282,14 @@ lateinit var paymentradioGroup:RadioGroup;
 
 
                     itemView.optionsBtn.setOnClickListener {
-                        val popup = CustomPopUp(context,itemView.optionsBtn) //view?.let { it1 -> activity?.let { it2 -> CustomPopUp(it2, it1) } }
+                     /*   val popup = CustomPopUp(context,itemView.optionsBtn) //view?.let { it1 -> activity?.let { it2 -> CustomPopUp(it2, it1) } }
                         if (popup != null) {
                             popup.setOnMenuItemClickListener(this@ItemViewHolder)
                             popup.setItem(imageView)
                             popup.inflate(R.menu.popup_menu_deliv)
                             popup.menu.removeItem(R.id.totalcartprice)
                             popup.show()
-                        }
+                        }*/
                     }
 
                 }

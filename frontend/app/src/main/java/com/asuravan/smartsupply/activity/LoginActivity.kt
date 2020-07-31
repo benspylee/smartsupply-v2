@@ -64,6 +64,7 @@ class LoginActivity : CommonActivity() {
             override fun onFailure(call: Call<AppUser>, t: Throwable) {
                 Log.e(ItemMasterFragment::class.java.simpleName, t.message, t)
                 progressHide()
+
                 toggleEnaDisable(loginButton,true);
             }
 
@@ -71,12 +72,12 @@ class LoginActivity : CommonActivity() {
                 if (response.isSuccessful) {
                     val info: AppUser? = response.body();
                     if (info != null) {
-                        toggleEnaDisable(loginButton,true);
+                      //  toggleEnaDisable(loginButton,true);
                         val editor: SharedPreferences.Editor = sharedPreferences?.edit()!!
                         info.appuserrolecd?.let { editor.putInt("appuserrolecd", it) }
                         editor.putInt("appusercd", info.appusercd!!)
                         editor.putString("emailid",info.emailid.toString())
-                        editor.putString("username",info.firstname + info.lastname)
+                        editor.putString("username",info.firstname!!.trim()+" " + info.lastname!!.trim())
                         editor.putString("usersession",BluebeeUtils.GetInstance().convertToString(info))
                         editor.apply();
                         editor.commit();
@@ -90,7 +91,10 @@ class LoginActivity : CommonActivity() {
                         "Error: ${response.code()} ${response.message()}"
 
                     )
-                    Toast.makeText(applicationContext,"Error occured",Toast.LENGTH_LONG).show()
+                    if(response.code()==500)
+                        makeToast("Check your credentials")
+                        else
+                        makeToast("Error occurred..")
                 }
                 progressHide()
                 toggleEnaDisable(loginButton,true);

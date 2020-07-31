@@ -12,7 +12,7 @@
         <item
             android:id="@+id/nav_vendor_search"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Search" />
+            android:title="Shop nearby" />
         <item
             android:id="@+id/nav_userproile"
             android:icon="@drawable/ic_menu_slideshow"

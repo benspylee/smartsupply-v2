@@ -54,6 +54,7 @@ class SignUpActivity : CommonActivity(), AdapterView.OnItemSelectedListener {
         setContentView(R.layout.activity_sign_up)
         ButterKnife.bind(this)
         supportActionBar?.hide();
+        super.activateProgress(this@SignUpActivity,false);
        list_of_control = arrayOf(firstname,email,password,mobileno);
         userType!!.setOnItemSelectedListener(this)
         val aa = ArrayAdapter(this, R.layout.spinner_item, list_of_items)
@@ -89,6 +90,7 @@ class SignUpActivity : CommonActivity(), AdapterView.OnItemSelectedListener {
     }
 
     private fun saveUserInfo() {
+        progressShow()
         var appUser=AppUser();
         appUser.firstname = firstname.text.toString()
         appUser.lastname = lastname.text.toString()
@@ -102,7 +104,7 @@ class SignUpActivity : CommonActivity(), AdapterView.OnItemSelectedListener {
     }
 
     private fun callMethod(call: Call<AppUser>) {
-        progressShow()
+
         call.enqueue(object : Callback<AppUser> {
             override fun onFailure(call: Call<AppUser>, t: Throwable) {
                 Log.e(ItemMasterFragment::class.java.simpleName, t.message, t)

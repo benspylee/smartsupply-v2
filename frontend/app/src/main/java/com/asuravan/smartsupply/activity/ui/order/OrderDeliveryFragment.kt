@@ -87,8 +87,8 @@ class OrderDeliveryFragment : CommonFragment() {
                 doordelivery.isChecked=false;
             }
             else{
-                selfpick.setChecked(true)
-                doordelivery.isChecked=false;
+                selfpick.setChecked(false)
+                doordelivery.isChecked=true;
             }
         }
         acceptOrder.setOnClickListener {
@@ -140,7 +140,7 @@ class OrderDeliveryFragment : CommonFragment() {
                     val info: List<Order>? = response.body();
                     if (info != null) {
                         removeItemToSharedPref("cart")
-                        makeToast("Action Processed sucess..!")
+                        makeToast("Processed Successfully...")
                         val fragmentGet = OrderFragment()
                         //     fragmentGet.setArguments(bundle)
                         var fr = fragmentManager?.beginTransaction()?.addToBackStack(null)

@@ -61,8 +61,7 @@ class DashBoardactivity : CommonActivity()  {
 
         // Grabs push client sdk instance
         push = MFPPush.getInstance()
-        // You can find your App Guid and Client Secret by navigating to the Configure section of your Push dashboard, click Mobile Options (Upper Right Hand Corner)
-        // TODO: Please replace <APP_GUID> and <CLIENT_SECRET> with a valid App GUID and Client Secret from the Push dashboard Mobile Options
+        
         push?.initialize(this, "xxx", "xxx")
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

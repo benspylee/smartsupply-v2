@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -41,6 +42,7 @@ class ShoppingCartFragment : CommonFragment() {
     lateinit var totalcartprice:TextView;
     lateinit var proccedtoaddresTransport:Button;
     var  totalcartpriceDouble:Double =0.0;
+    lateinit var action: LinearLayout;
 
     lateinit var  recyclerViewCart: RecyclerView ;
     override fun onCreateView(
@@ -53,6 +55,7 @@ class ShoppingCartFragment : CommonFragment() {
         recyclerViewCart = root.findViewById(R.id.recyclerViewCart)
         totalcartprice= root.findViewById(R.id.totalcartprice);
         proccedtoaddresTransport= root.findViewById(R.id.proccedtoaddresTransport);
+        action=root.findViewById(R.id.action)
         proccedtoaddresTransport.setOnClickListener {
             if(listitems!!.size>0) {
                 val bundle = Bundle()
@@ -119,8 +122,10 @@ class ShoppingCartFragment : CommonFragment() {
     private fun RecyclerView?.loadAdapter(info: ArrayList<ItemInfo?>?) {
         if (info != null) {
             listitems = info as java.util.ArrayList<ItemInfo?>?
-            if (listitems != null)
+            if (listitems != null) {
+                    action.visibility=View.VISIBLE
                 this?.adapter = createItemsAdapter(listitems!!)
+            }
         }
     }
 

@@ -51,7 +51,11 @@ public class OrderFileDao extends NamedParameterJdbcDaoSupport {
         Map<String,Object> map = new HashMap<>(1);
         map.put("orderid",orderid);
         String sql="SELECT INFECT_REPORT  infectreport ,STATUS  status ,ORDER_ID  orderid ,ORDER_FILE_ID  orderfileid ,INVOICE_FILE  invoicefile  FROM VSV58378.ORDER_FILE  WHERE ORDER_ID = :orderid ";
-        return (OrderFile) namedParameterJdbcTemplate.queryForObject(sql,map,new BeanPropertyRowMapper(OrderFile.class));
+        try {
+            return (OrderFile) namedParameterJdbcTemplate.queryForObject(sql,map,new BeanPropertyRowMapper(OrderFile.class));
+        } catch (DataAccessException e) {
+            return null;
+        }
     }
 
     public OrderFile addOrderFile(OrderFile orderfile){

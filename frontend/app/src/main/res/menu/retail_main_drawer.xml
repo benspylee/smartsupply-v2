@@ -15,7 +15,7 @@
         <item
             android:id="@+id/nav_shop"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_shop" />
+            android:title="MyShop" />
 
         <item
             android:id="@+id/nav_userproile"
@@ -25,7 +25,7 @@
         <item
             android:id="@+id/nav_order"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Order" />
+            android:title="Order Mgmt" />
 
 
 

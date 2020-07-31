@@ -58,7 +58,7 @@ class OrderDetailCustomerFragment : CommonFragment() {
         txtdelverycharge = root.findViewById(R.id.txtdelverycharge)
         totcartamt = root.findViewById(R.id.totcartamt)
         detail=root.findViewById(R.id.detail)
-        action=root.findViewById(R.id.action)
+        action=root.findViewById(R.id.actiondow)
         deliveryPerson=root.findViewById(R.id.deliveryPerson)
         recycleinfo=root.findViewById(R.id.orderItem)
         downloadinvoice =  root.findViewById(R.id.downloadinvoice)
@@ -70,10 +70,11 @@ class OrderDetailCustomerFragment : CommonFragment() {
             tottiemprice.text="Rs."+order.totOrderPrice
             txtdelverycharge.text="Rs."+0.0.toString()
             totcartamt.text="Rs."+order.totOrderPrice
+            if(order.driverDetails!=null)
             deliveryPerson.text=order.driverDetails.toString().replace("@@",",\n ");
+            else
+                deliveryPerson.text="Order processing..."
 
-            //if(order.acceptstatcd==4)
-            //    action.visibility=View.INVISIBLE
         }
 
 
@@ -128,7 +129,7 @@ class OrderDetailCustomerFragment : CommonFragment() {
                     val info: List<Order>? = response.body();
                     if (info != null) {
                         //removeItemToSharedPref("cart")
-                        makeToast("Action Processed sucess..!")
+                        makeToast("Processed Successfully...")
                         val fragmentGet = OrderFragment()
                         //     fragmentGet.setArguments(bundle)
                         var fr = fragmentManager?.beginTransaction()?.addToBackStack(null)
@@ -180,7 +181,7 @@ class OrderDetailCustomerFragment : CommonFragment() {
                     val info: List<Order>? = response.body();
                     if (info != null) {
                         //removeItemToSharedPref("cart")
-                        makeToast("Action Processed sucess..!")
+                        makeToast("Processed Successfully...")
                         val fragmentGet = OrderFragment()
                         //     fragmentGet.setArguments(bundle)
                         var fr = fragmentManager?.beginTransaction()?.addToBackStack(null)

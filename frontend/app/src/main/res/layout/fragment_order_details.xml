@@ -137,34 +137,35 @@
             </LinearLayout>
 
 
+            <LinearLayout
+                android:id="@+id/actiondet"
+                android:visibility="invisible"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/rejectorder"
+                    android:layout_width="198dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/btn_login_bg"
+                    android:text="reject Order">
+
+
+                </Button>
+
+                <Button
+                    android:id="@+id/proccedtoTra"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/btn_login_bg"
+                    android:text="Procceed">
+
+                </Button>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/action"
-            android:visibility="invisible"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/rejectorder"
-                android:layout_width="198dp"
-                android:layout_height="wrap_content"
-                android:background="@color/btn_login_bg"
-                android:text="reject Order">
-
-
-            </Button>
-
-            <Button
-                android:id="@+id/proccedtoTra"
-                android:layout_width="210dp"
-                android:layout_height="wrap_content"
-                android:background="@color/btn_login_bg"
-                android:text="Procceed">
-
-            </Button>
-        </LinearLayout>
 
     </LinearLayout>
 

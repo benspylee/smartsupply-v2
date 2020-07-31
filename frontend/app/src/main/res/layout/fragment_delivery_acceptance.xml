@@ -67,7 +67,7 @@
                 <TextView
                     android:layout_width="265dp"
                     android:layout_height="wrap_content"
-                    android:text="Customer Name"></TextView>
+                    android:text="total Item Price"></TextView>
 
                 <TextView
                     android:id="@+id/tottiemprice"
@@ -88,7 +88,7 @@
                 <TextView
                     android:layout_width="265dp"
                     android:layout_height="wrap_content"
-                    android:text="Customer Mob"></TextView>
+                    android:text="delivery charge"></TextView>
 
                 <TextView
                     android:id="@+id/txtdelverycharge"
@@ -101,7 +101,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="156dp"
+                android:layout_height="91dp"
                 android:orientation="horizontal"
                 android:paddingTop="10dp">
 
@@ -148,6 +148,17 @@
 
             </Button>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/deliverycomp"
+            android:text="Delivered"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:background="@color/btn_login_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Button>
 
     </LinearLayout>
 

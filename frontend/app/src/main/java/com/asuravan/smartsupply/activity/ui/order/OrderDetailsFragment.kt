@@ -56,7 +56,7 @@ class OrderDetailsFragment : CommonFragment() {
         totcartamt = root.findViewById(R.id.totcartamt)
         proccedtoTra=root.findViewById(R.id.proccedtoTra)
         detail=root.findViewById(R.id.detail)
-        action=root.findViewById(R.id.action)
+        action=root.findViewById(R.id.actiondet)
         deliveryAddress=root.findViewById(R.id.deliveryAddress)
         recycleinfo=root.findViewById(R.id.orderItem)
         rejectorder =  root.findViewById(R.id.rejectorder)
@@ -66,12 +66,14 @@ class OrderDetailsFragment : CommonFragment() {
             if(arguments!=null) {
                 order = arguments!!.get("item") as Order;
                 tottiemprice.text="Rs."+order.totOrderPrice
-                txtdelverycharge.text="Rs."+0.0.toString()
-                totcartamt.text="Rs."+order.totOrderPrice
+                txtdelverycharge.text=if( order.deliverytype==1)"Rs."+0.0.toString() else "Rs."+20.0.toString()
+                totcartamt.text=if( order.deliverytype==1)"Rs."+order.totOrderPrice else "Rs."+(order.totOrderPrice+20)
                 deliveryAddress.text=order.deliveryAddress.toString().replace("@@",",\n ");
 
-                //if(order.acceptstatcd==4)
-                //    action.visibility=View.INVISIBLE
+                if(order.status==1 || order.status==5 || order.status==5)
+                    action.visibility=View.VISIBLE
+                else
+                    action.visibility=View.INVISIBLE
             }
 
         proccedtoTra.setOnClickListener {
@@ -122,7 +124,7 @@ class OrderDetailsFragment : CommonFragment() {
                     val info: List<Order>? = response.body();
                     if (info != null) {
                         removeItemToSharedPref("cart")
-                        makeToast("Action Processed sucess..!")
+                        makeToast("Processed Successfully...")
                         val fragmentGet = OrderFragment()
                         //     fragmentGet.setArguments(bundle)
                         var fr = fragmentManager?.beginTransaction()?.addToBackStack(null)

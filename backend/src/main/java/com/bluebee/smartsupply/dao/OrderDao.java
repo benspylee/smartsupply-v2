@@ -147,8 +147,6 @@ public class OrderDao extends NamedParameterJdbcDaoSupport {
     }
 
     public List<Order> processOrderStatus(OrderBundle orderBundle) throws Exception{
-
-        generateInvoice(4);
         //1-order placed //2- accepted //3-rejected //4-delivery accepted
         //5- delivery rejected // 6 - inTransit //7-delivered //8-cancelled
         AppUser appUser= orderBundle.getAppUser();
@@ -181,7 +179,7 @@ public class OrderDao extends NamedParameterJdbcDaoSupport {
                 deliveryTaskDao.addDeliveryTask(deliveryTask);
             }
 
-            Order orderprocess = getOrderSummaryById(4);
+            Order orderprocess = getOrderSummaryById(order.getOrderid());
             String address =   orderprocess.getDeliveryAddress().replaceAll("@@","\n ,");
             String res="{\"appusercd\":\""+appUser.getAppusercd()+"\",\"deliveryaddress\":\""+address+"\"}";
             String base = Base64.getEncoder().encodeToString(res.getBytes());
