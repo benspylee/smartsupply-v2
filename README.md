@@ -59,7 +59,7 @@ we are engaging to build this solution quickly with IBM cloud based service like
 
 ## Project roadmap
 
-![Roadmap](roadmap.jpg)
+![Roadmap](https://github.com/benspylee/smartsupply-v2/blob/master/docs/roadmap.png)
 
 ## Getting started
 
@@ -109,7 +109,7 @@ cd smartsupply-v2/backend
 
 Configure db2 server details and basic authorization details in application.properties and run 'SmartsupplyApplication.java' as Java Application 
 
-![validate server status](https://github.com/benspylee/smartsupply-v2/blob/master/docs/architecture.png)
+![validate server status](https://github.com/benspylee/smartsupply-v2/blob/master/docs/server-logs.png)
 
 ## Running the tests
 
