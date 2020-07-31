@@ -4,7 +4,7 @@
 
 This repository contains two modules one is android application client and other is rest api server back end.
 Our Theme for callforcode is local community communication/co-operation.we build an app that mediates between local vendors and customers within  that area and deliver the essential 
-safely with local delivery agents which encourages social distancing , tracking and isolation of people within this supply chain
+safely with local delivery agents which encourages social distancing , tracking and isolation of people within this supply chain.Contactless delivery and delay in order can be avoided by preferring local vendors are few advantages of this system.
 
 
 
@@ -130,7 +130,7 @@ You can find a running system to test at [callforcode.mybluemix.net](http://call
 * [IBM Cloud Object Storage](https://www.ibm.com/cloud/object-storage) - Used to store Reports,Invoice and user docs deliver them safely
 * [IBM Push Notifications](https://www.ibm.com/cloud/push-notifications) - Push notification to user end
 * [Gradle](https://gradle.org/install/) - Dependency management
-* [Android Studio](https://developer.android.com/studio/releases/sdk-tools) - Used to generate generate Apk
+* [Android Studio](https://developer.android.com/studio/releases/sdk-tools) - Used to generate Apk
 
 ## Contributing
 
@@ -144,7 +144,7 @@ We use [Github](https://github.com/) for versioning. For the versions available,
 
 * **Barath Ramalingam** - *Initial work* - [SmartSupply](https://github.com/Benspylee)
 
-See also the list of [contributors](https://github.com/Code-and-Response/Project-Sample/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/benspylee/smartsupply-v2.git) who participated in this project.
 
 ## License
 
