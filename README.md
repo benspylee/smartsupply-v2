@@ -3,9 +3,8 @@
 [![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://github.com/benspylee/smartsupply-v2.git)
 
 This repository contains two modules one is android application client and other is rest api server back end.
-Our Theme for callforcode is local community communication/co-operation.we build an app that mediates between local vendors and customers within  that area and deliver the essential 
+Our Theme for callforcode is local community communication/co-operation.we build an app that mediates between local vendors and customers within  that area and deliver the essentials 
 safely with local delivery agents which encourages social distancing , tracking and isolation of people within this supply chain.Contactless delivery and delay in order can be avoided by preferring local vendors are few advantages of this system.
-
 
 
 ## Contents
@@ -47,10 +46,13 @@ we build an app that connects local vendors who need to sell their items and cus
 
 ![Smartsupply app](https://github.com/benspylee/smartsupply-v2/blob/master/docs/architecture.png)
 
-1. This app supports three different users role Retail vendor,customer and delivery agent.Users register with app, After verification user can login and use.
-2. We build an android client that communicates with rest-api which deployed in IBM cloud foundry and saves data IBM Db2.
-3. Customers orders items by browsing shop registered with app, we send notification to Customer and Delivery Agents
-4. This app stores invoice,Report document,user documents and images within IBM Object Storage.
+1. This app supports three different user roles Retail vendor,Customer and Delivery agent.Users register with app, After verification user can login and use.
+2. We build an android client that communicates with rest-api which deployed in IBM cloud foundry and we save user generated transaction data in IBM Db2.
+3. Customers orders items by browsing shop registered with app, we send notification to Customer and Delivery Agents with respect to order flow
+4. Order receive to local retail vendor, he goes through it and he may accept or reject order.
+5. Once retail vendor good with order he will prepare the order and assign it to local delivery agent.
+6. delivery agent receives the job and he may accept the delivery or reject it.If he accept it he began to pick up the order and deliver it to customer and get the delivery charge.
+4. This app stores user generated invoices,reports and images on IBM Object Storage.
 
 ## Long description
 
@@ -124,12 +126,12 @@ You can find a running system to test at [callforcode.mybluemix.net](http://call
 
 ## Built with
 
-* [IBM Cloud Foundry](https://www.cloudfoundry.org/the-foundry/ibm-cloud-foundry/) -SpringBoot based rest-api deployed
-* [IBM Cloud Functions](https://cloud.ibm.com/catalog?search=cloud%20functions#search_results) - servless rest-api to Send Push Notification Message
-* [IBM Cloud Object Storage](https://www.ibm.com/cloud/object-storage) - Used to store Reports,Invoice and user docs deliver them safely
-* [IBM Push Notifications](https://www.ibm.com/cloud/push-notifications) - Push notification to user end
+* [IBM Cloud Foundry](https://www.cloudfoundry.org/the-foundry/ibm-cloud-foundry/)  - SpringBoot based rest-api deployed in cloud foundry
+* [IBM Cloud Functions](https://cloud.ibm.com/catalog?search=cloud%20functions#search_results) - Nodejs function exposed as servless rest-api to send push notification message
+* [IBM Cloud Object Storage](https://www.ibm.com/cloud/object-storage) - Used to store reports,invoice and user docs securely.
+* [IBM Push Notifications](https://www.ibm.com/cloud/push-notifications) - Deliver push notification to user end
 * [Gradle](https://gradle.org/install/) - Dependency management
-* [Android Studio](https://developer.android.com/studio/releases/sdk-tools) - Used to generate Apk
+* [Android Studio](https://developer.android.com/studio/releases/sdk-tools) - Used to develop,build the android client
 
 ## Contributing
 
